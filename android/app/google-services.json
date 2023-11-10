@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "161807354731",
+    "project_id": "optimizedparkingapp",
+    "storage_bucket": "optimizedparkingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161807354731:android:d6cc4ace46217c37fa1a2e",
+        "android_client_info": {
+          "package_name": "com.flutterflow.edriveapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4bPScXAAWMpbjH095cgA-rQd6qsED6CM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161807354731:android:9ea040ddc49362ccfa1a2e",
+        "android_client_info": {
+          "package_name": "com.flutterflow.optimizedParkingAppUHK"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4bPScXAAWMpbjH095cgA-rQd6qsED6CM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

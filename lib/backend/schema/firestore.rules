@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{document} {
+      allow create: if request.auth.uid == document;
+      allow read: if true;
+      allow write: if request.auth.uid == document;
+      allow delete: if false;
+    }
+
+    match /payments/{document} {
+      allow create: if request.resource.data.paymentUser == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow read: if resource.data.paymentUser == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /car/{document} {
+      allow create: if request.resource.data.carUser == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow read: if resource.data.carUser == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow write: if resource.data.carUser == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow delete: if resource.data.carUser == /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+    match /chargingSpots/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /parkingLot/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /chargingSpots/{parent}/reservations/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/reservations/{document} {
+      allow read: if true;
+    }
+
+  }
+}
