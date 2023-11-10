@@ -1,7 +1,3 @@
 # OptimizedParkingApp
 
-A new Flutter project.
-
-## Getting Started
-
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+A flutter project for smart vertical parking. Part of my masters thesis at University of Hradec Králové.
